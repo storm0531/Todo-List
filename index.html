@@ -1,0 +1,34 @@
+{% extends "bootstrap/base.html" %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+{% endblock %}
+
+{% block title %}MY To Do List{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h2 class="text-light">
+        Add to Do List
+    </h2>
+    <form class="form-inline form" method="post" action="/add">
+        <input class="form-group input-lg task-input" type="text" name="new_task" placeholder="new task is...">
+        <span class="button">
+            <button type="submit" class="btn btn-warning btn-lg">ADD</button>
+        </span>
+    </form>
+</div>
+<div class="container">
+    <ol class="row">
+        {% for task in todos %}
+        <li class="col">
+            <input class="big-checkbox" type="checkbox" id="{{ task }}">
+            <label for="{{ task }}">{{ task }} </label>
+            <a methods="delete" class="delete_task" href="{{ url_for('delete',task_title=task) }}">❌</a>
+        </li>
+        <hr>
+        {% endfor %}
+        </ol>
+</div>
+{% endblock %}

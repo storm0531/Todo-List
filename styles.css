@@ -1,0 +1,39 @@
+h2 {
+color:white;
+}
+ol {
+padding: 0px 15%;
+}
+li {
+font-size: 2rem;
+padding: 0px 5%;
+}
+label {
+  width: 90%;
+  text-align: center;
+}
+hr {
+border: dashed 2px blue;
+border-bottom:0;
+margin-top: 10px;
+width:90%;
+margin-bottom: 10px;
+}
+.big-checkbox {width: 30px; height: 30px;}
+
+.delete_task {
+position: absolute;
+right: 18%;
+width: 5%;
+text-align: center;
+padding: 7px;
+}
+.btn {
+width:15%;
+}
+.task-input {
+width:40%;
+}
+.jumbotron {
+background-color:green;
+}
